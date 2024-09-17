@@ -1,0 +1,8 @@
+[package]
+name = "pnc-id"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+base32 = "0.5.1"
+clap = { version = "4.5.17", features = ["derive"] }
