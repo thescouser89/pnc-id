@@ -43,3 +43,26 @@ fn main() {
 
     println!("{}", output);
 }
+
+
+#[cfg(test)]
+mod test_main {
+    use super::*;
+
+    #[test]
+    fn test_encode_base32() {
+        let id = 627140352073875456;
+        let output = encode_base32(id);
+        assert_eq!(output, "BC2AZU6VVVAAA");
+
+        // test also the symmetry of encode and decode
+        let decoded = decode_base32(&output);
+        assert_eq!(decoded, id);
+    }
+
+    #[test]
+    fn test_decode_base32() {
+        let output = decode_base32("BC2AZU6VVVAAA");
+        assert_eq!(output, 627140352073875456);
+    }
+}
