@@ -5,4 +5,4 @@ edition = "2021"
 
 [dependencies]
 base32 = "0.5.1"
-clap = { version = "4.5.27", features = ["derive"] }
+clap = { version = "4.5.28", features = ["derive"] }
